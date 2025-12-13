@@ -9,6 +9,11 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
     }
 
     while (true) {
+        ClearDrawScreen();
+
+        GetSceneManager().UpdateScene();
+        GetSceneManager().DrawScene();
+
         ScreenFlip();
         WaitTimer(1000 / Screen::FPS);
         if (ProcessMessage() == -1) {
@@ -28,6 +33,8 @@ int initApplication() {
 
     SetBackgroundColor(Screen::BACKCOLOR[0], Screen::BACKCOLOR[1], Screen::BACKCOLOR[2]);
     SetDrawScreen(DX_SCREEN_BACK);
+
+	GetSceneManager().ChangeScene("TitleScene");
 
     return 0;
 }
