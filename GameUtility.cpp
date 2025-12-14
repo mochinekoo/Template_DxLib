@@ -20,3 +20,22 @@ void GameUtility::DrawFix2DText(DrawType type, int x, int y, int size, string te
 
     DrawString(x, y, text.c_str(), textColor, edgeColor);
 }
+
+void GameUtility::UpdateKey() {
+    memcpy_s(KeyInput::beforeKeyBuf, sizeof(char) * KeyInput::KEYCOUNT, KeyInput::afterKeyBuf, sizeof(char) * KeyInput::KEYCOUNT); //after（後フレーム）から before（前フレーム）にコピー
+    GetHitKeyStateAll(KeyInput::afterKeyBuf); //後フレームに代入
+
+    for (int n = 0; n < KeyInput::KEYCOUNT; n++) {
+        int key_xor = KeyInput::beforeKeyBuf[n] ^ KeyInput::afterKeyBuf[n]; //前と後が0と1なら、1を返す（XOR）
+        KeyInput::fixDownKeyBuf[n] = key_xor & KeyInput::afterKeyBuf[n]; //押された瞬間 = (XORと後フレームのANDを取る) 
+		KeyInput::fixUpKeyBuf[n] = key_xor & KeyInput::beforeKeyBuf[n]; //離された瞬間 = (XORと前フレームのANDを取る)
+    }
+}
+
+bool GameUtility::IsKeyDown(int keyCode) {
+    return KeyInput::fixDownKeyBuf[keyCode];
+}
+
+bool GameUtility::IsKeyUp(int keyCode) {
+	return KeyInput::fixUpKeyBuf[keyCode];
+}

@@ -22,6 +22,9 @@
     <Filter Include="ソース ファイル\Scene">
       <UniqueIdentifier>{0e9aa385-1585-4775-88a4-fe95bd35772f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Draw">
+      <UniqueIdentifier>{b381716e-4c29-4670-9446-cf391e11674d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
