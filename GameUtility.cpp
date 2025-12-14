@@ -1,6 +1,15 @@
 #include "GameUtility.h"
 #include <DxLib.h>
 
+namespace KeyInput {
+    const int KEYCOUNT = 256;
+    char beforeKeyBuf[KEYCOUNT] = {};
+    char afterKeyBuf[KEYCOUNT] = {};
+
+    char fixDownKeyBuf[KEYCOUNT] = {};
+    char fixUpKeyBuf[KEYCOUNT] = {};
+}
+
 void GameUtility::DrawFix2DText(DrawType type, int x, int y, int size, string text, unsigned int textColor, unsigned int edgeColor) {
     SetFontSize(size);
     int strWidth = GetDrawStringWidth(text.c_str(), strlen(text.c_str()));

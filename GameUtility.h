@@ -4,15 +4,6 @@
 
 using namespace std;
 
-namespace KeyInput {
-	const int KEYCOUNT = 256;
-	char beforeKeyBuf[KEYCOUNT] = {};
-	char afterKeyBuf[KEYCOUNT] = {};
-
-	char fixDownKeyBuf[KEYCOUNT] = {};
-	char fixUpKeyBuf[KEYCOUNT] = {};
-}
-
 enum DrawType {
 	LEFT,
 	CENTER,
