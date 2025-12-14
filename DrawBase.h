@@ -16,9 +16,14 @@ public:
 	DrawBase(std::string name_, float width_, float height_, unsigned int color_, Location postion_, Vector3D vector_);
 	~DrawBase();
 	virtual void Draw() = 0;
+
 	std::string  GetName() const { return name; };
 	float GetWidth() const { return width; };
 	float GetHeight() const { return height; };
+	Vector3D GetVector() const { return vector; };
+	void SetVector(Vector3D vector_) { vector = vector_; };
+	Location GetPostion() const { return postion; };
+	void SetPostion(Location postion_) { postion = postion_; };
 	unsigned int GetColor() const { return color; };
 	void SetColor(unsigned int color_) { color = color; };
 	unsigned int GetCustomData() const { return customData; };
