@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="application.cpp" />
     <ClCompile Include="DrawBase.cpp" />
     <ClCompile Include="CircleDraw.cpp" />
     <ClCompile Include="GameUtility.cpp" />

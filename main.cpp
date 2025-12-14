@@ -16,6 +16,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 
     while (true) {
         ClearDrawScreen();
+		GetMousePoint(&Screen::mouseX, &Screen::mouseY);
 
         sceneManager.UpdateScene();
         sceneManager.DrawScene();

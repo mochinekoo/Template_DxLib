@@ -1,11 +1,17 @@
 #pragma once
 #include "SceneManager.h"
+#include "Location.h"
 
 namespace Screen {
-	const int WIDTH = 1280;
-	const int HEIGHT = 720;
-	const int COLORBIT = 32;
-	const int BACKCOLOR[3] = {0, 0, 0};
-	const int FPS = 60;
-	const char* TITLE = "GameTemplate";
+	extern const int WIDTH;
+	extern const int HEIGHT;
+	extern const int COLORBIT;
+	extern const int BACKCOLOR[3];
+	extern const int FPS;
+	extern const char* TITLE;
+	extern int mouseX, mouseY;
+}
+
+inline Location GetMouseLocation() {
+	return Location(Screen::mouseX, Screen::mouseY, 0);
 }
