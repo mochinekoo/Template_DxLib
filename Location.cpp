@@ -25,7 +25,7 @@ void Location::Set(float x, float y, float z) {
 	z_ = z;
 }
 
-float Location::Distance(Location& location) const {
+float Location::Distance(const Location& location) const {
 	return sqrt((x_ - location.x_) * (x_ - location.x_) +
 				(y_ - location.y_) * (y_ - location.y_) +
 				(z_ - location.z_) * (z_ - location.z_));
