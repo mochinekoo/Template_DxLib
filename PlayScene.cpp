@@ -5,7 +5,7 @@
 
 PlayScene::PlayScene() :
 	time(0) {
-	drawList.push_back(new CircleDraw(std::string("TitleCircle"), 30.0f, GetColor(255, 0, 0), Vector3D(0.0f, 0.0f, 0.0f), Vector3D(150.0f, 150.0f, 0.0f)));
+	drawList.push_back(new CircleDraw(std::string("TitleCircle"), 30.0f, GetColor(255, 0, 0), Location(150.0f, 150.0f, 0.0f), Vector3D(0.0f, 0.0f, 0.0f)));
 }
 
 PlayScene::~PlayScene() {

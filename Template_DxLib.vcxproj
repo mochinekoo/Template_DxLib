@@ -132,6 +132,7 @@
     <ClCompile Include="DrawBase.cpp" />
     <ClCompile Include="CircleDraw.cpp" />
     <ClCompile Include="GameUtility.cpp" />
+    <ClCompile Include="Location.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PlayScene.cpp" />
     <ClCompile Include="SceneBase.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="DrawBase.h" />
     <ClInclude Include="CircleDraw.h" />
     <ClInclude Include="GameUtility.h" />
+    <ClInclude Include="Location.h" />
     <ClInclude Include="PlayScene.h" />
     <ClInclude Include="SceneBase.h" />
     <ClInclude Include="SceneManager.h" />

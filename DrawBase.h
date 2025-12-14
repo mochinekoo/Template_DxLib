@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "Vector3D.h"
+#include "Location.h"
 
 class DrawBase {
 private:
@@ -10,9 +11,9 @@ private:
 	unsigned int customData; 
 protected:
 	Vector3D vector;
-	Vector3D postion;
+	Location postion;
 public:
-	DrawBase(std::string name_, float width_, float height_, unsigned int color_, Vector3D vector_, Vector3D postion_);
+	DrawBase(std::string name_, float width_, float height_, unsigned int color_, Location postion_, Vector3D vector_);
 	~DrawBase();
 	virtual void Draw() = 0;
 	std::string  GetName() const { return name; };

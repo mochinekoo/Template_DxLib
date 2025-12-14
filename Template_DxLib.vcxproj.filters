@@ -54,6 +54,9 @@
     <ClCompile Include="PlayScene.cpp">
       <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="Location.cpp">
+      <Filter>ソース ファイル\Library</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h">
@@ -82,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="PlayScene.h">
       <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Location.h">
+      <Filter>ソース ファイル\Library</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

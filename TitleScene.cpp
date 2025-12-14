@@ -2,10 +2,12 @@
 #include "GameUtility.h"
 #include "CircleDraw.h"
 #include "SceneManager.h"
+#include "Vector3D.h"
+#include "Location.h"
 
 TitleScene::TitleScene() :
 	time(0){
-	drawList.push_back(new CircleDraw(std::string("TitleCircle"), 30.0f, GetColor(0, 255, 0), Vector3D(0.0f, 0.0f, 0.0f), Vector3D(150.0f, 150.0f, 0.0f)));
+	drawList.push_back(new CircleDraw(std::string("TitleCircle"), 30.0f, GetColor(0, 255, 0), Location(150.0f, 150.0f, 0.0f), Vector3D(0.0f, 0.0f, 0.0f)));
 }
 
 TitleScene::~TitleScene() {
