@@ -1,7 +1,11 @@
 #pragma once
 #include <string>
+#include <vector>
+#include "DrawBase.h"
 
 class SceneBase {
+protected:
+	std::vector<DrawBase*> drawList;
 private:
 	std::string name;
 public:

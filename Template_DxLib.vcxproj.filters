@@ -48,6 +48,9 @@
     <ClCompile Include="Vector3D.cpp">
       <Filter>ソース ファイル\Library</Filter>
     </ClCompile>
+    <ClCompile Include="CircleDraw.cpp">
+      <Filter>ソース ファイル\Draw</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h">
@@ -67,6 +70,12 @@
     </ClInclude>
     <ClInclude Include="Vector3D.h">
       <Filter>ソース ファイル\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawBase.h">
+      <Filter>ソース ファイル\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleDraw.h">
+      <Filter>ソース ファイル\Draw</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

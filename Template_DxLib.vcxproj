@@ -130,6 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DrawBase.cpp" />
+    <ClCompile Include="CircleDraw.cpp" />
     <ClCompile Include="GameUtility.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneBase.cpp" />
@@ -139,6 +140,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
+    <ClInclude Include="DrawBase.h" />
+    <ClInclude Include="CircleDraw.h" />
     <ClInclude Include="GameUtility.h" />
     <ClInclude Include="SceneBase.h" />
     <ClInclude Include="SceneManager.h" />
