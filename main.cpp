@@ -1,7 +1,12 @@
 #include "DxLib.h"
 #include "application.h"
+#include "SceneManager.h"
 
 int initApplication();
+
+namespace {
+    SceneManager& sceneManager = SceneManager::GetInstance();
+}
 
 int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) {
     if (initApplication() != 0) {
@@ -11,8 +16,8 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
     while (true) {
         ClearDrawScreen();
 
-        GetSceneManager().UpdateScene();
-        GetSceneManager().DrawScene();
+        sceneManager.UpdateScene();
+        sceneManager.DrawScene();
 
         ScreenFlip();
         WaitTimer(1000 / Screen::FPS);
@@ -34,7 +39,7 @@ int initApplication() {
     SetBackgroundColor(Screen::BACKCOLOR[0], Screen::BACKCOLOR[1], Screen::BACKCOLOR[2]);
     SetDrawScreen(DX_SCREEN_BACK);
 
-	GetSceneManager().ChangeScene("TitleScene");
+	sceneManager.ChangeScene("TitleScene");
 
     return 0;
 }

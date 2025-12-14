@@ -9,8 +9,3 @@ namespace Screen {
 	const int FPS = 60;
 	const char* TITLE = "GameTemplate";
 }
-
-inline SceneManager& GetSceneManager() {
-	static SceneManager sceneManager;
-	return sceneManager;
-}

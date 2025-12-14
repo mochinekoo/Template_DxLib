@@ -1,6 +1,8 @@
 #include "SceneManager.h"
 #include "TitleScene.h"
 
+SceneManager SceneManager::instance;
+
 SceneManager::SceneManager() {
 	currentScene = nullptr;
 	sceneList.push_back(new TitleScene());
