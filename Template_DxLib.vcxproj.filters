@@ -42,6 +42,12 @@
     <ClCompile Include="GameUtility.cpp">
       <Filter>ソース ファイル\Library</Filter>
     </ClCompile>
+    <ClCompile Include="DrawBase.cpp">
+      <Filter>ソース ファイル\Draw</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3D.cpp">
+      <Filter>ソース ファイル\Library</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h">
@@ -57,6 +63,9 @@
       <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="GameUtility.h">
+      <Filter>ソース ファイル\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3D.h">
       <Filter>ソース ファイル\Library</Filter>
     </ClInclude>
   </ItemGroup>
