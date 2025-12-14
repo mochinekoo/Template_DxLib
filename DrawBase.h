@@ -25,7 +25,7 @@ public:
 	Location GetPostion() const { return postion; };
 	void SetPostion(Location postion_) { postion = postion_; };
 	unsigned int GetColor() const { return color; };
-	void SetColor(unsigned int color_) { color = color; };
+	void SetColor(unsigned int color_) { color = color_; };
 	unsigned int GetCustomData() const { return customData; };
 	void SetCustomData(unsigned int customData_) { customData = customData_; };
 };
