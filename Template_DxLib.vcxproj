@@ -133,6 +133,7 @@
     <ClCompile Include="CircleDraw.cpp" />
     <ClCompile Include="GameUtility.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PlayScene.cpp" />
     <ClCompile Include="SceneBase.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="TitleScene.cpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="DrawBase.h" />
     <ClInclude Include="CircleDraw.h" />
     <ClInclude Include="GameUtility.h" />
+    <ClInclude Include="PlayScene.h" />
     <ClInclude Include="SceneBase.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="TitleScene.h" />

@@ -51,6 +51,9 @@
     <ClCompile Include="CircleDraw.cpp">
       <Filter>ソース ファイル\Draw</Filter>
     </ClCompile>
+    <ClCompile Include="PlayScene.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h">
@@ -76,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="CircleDraw.h">
       <Filter>ソース ファイル\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScene.h">
+      <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

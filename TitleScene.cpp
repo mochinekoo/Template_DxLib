@@ -1,9 +1,11 @@
 #include "TitleScene.h"
 #include "GameUtility.h"
 #include "CircleDraw.h"
+#include "SceneManager.h"
 
 TitleScene::TitleScene() :
 	time(0){
+	drawList.push_back(new CircleDraw(std::string("TitleCircle"), 30.0f, GetColor(0, 255, 0), Vector3D(0.0f, 0.0f, 0.0f), Vector3D(150.0f, 150.0f, 0.0f)));
 }
 
 TitleScene::~TitleScene() {
@@ -11,11 +13,14 @@ TitleScene::~TitleScene() {
 
 void TitleScene::Init() {
 	time = 0;
-	drawList.push_back(new CircleDraw(std::string("TitleCircle"), 30.0f, GetColor(255, 0, 0), Vector3D(0.0f, 0.0f, 0.0f), Vector3D(150.0f, 150.0f, 0.0f)));
 }
 
 void TitleScene::Update() {
 	time++;
+
+	if (GameUtility::IsKeyDown(KEY_INPUT_SPACE)) {
+		SceneManager::GetInstance().ChangeScene("PlayScene");
+	}
 }
 
 void TitleScene::Draw() {

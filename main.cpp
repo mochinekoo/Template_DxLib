@@ -1,6 +1,7 @@
 #include "DxLib.h"
 #include "application.h"
 #include "SceneManager.h"
+#include "GameUtility.h"
 
 int initApplication();
 
@@ -18,6 +19,7 @@ int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int n
 
         sceneManager.UpdateScene();
         sceneManager.DrawScene();
+        GameUtility::UpdateKey();
 
         ScreenFlip();
         WaitTimer(1000 / Screen::FPS);
