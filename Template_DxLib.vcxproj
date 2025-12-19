@@ -130,6 +130,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
+    <ClCompile Include="BoxDraw.cpp" />
     <ClCompile Include="DrawBase.cpp" />
     <ClCompile Include="CircleDraw.cpp" />
     <ClCompile Include="GameUtility.cpp" />
@@ -143,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
+    <ClInclude Include="BoxDraw.h" />
     <ClInclude Include="DrawBase.h" />
     <ClInclude Include="CircleDraw.h" />
     <ClInclude Include="GameUtility.h" />

@@ -7,3 +7,10 @@ DrawBase::DrawBase(std::string name_, float width_, float height_, unsigned int 
 DrawBase::~DrawBase()
 {
 }
+
+bool DrawBase::IsAABBCollision(const DrawBase& other) const {
+	return postion.GetX() - width / 2 < other.postion.GetX() &&
+		postion.GetX() + width / 2 > other.postion.GetX() &&
+		postion.GetY() - height / 2 < other.postion.GetY() &&
+		postion.GetY() + height / 2 > other.postion.GetY();
+}

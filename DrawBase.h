@@ -28,4 +28,6 @@ public:
 	void SetColor(unsigned int color_) { color = color_; };
 	unsigned int GetCustomData() const { return customData; };
 	void SetCustomData(unsigned int customData_) { customData = customData_; };
+
+	bool IsAABBCollision(const DrawBase& other) const;
 };
