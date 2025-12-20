@@ -11,6 +11,9 @@ public:
 	float GetY() const;
 	float GetZ() const;
 	void Set(float x, float y, float z);
+	void SetX(float x) { x_ = x; };
+	void SetY(float y) { y_ = y; };
+	void SetZ(float z) { z_ = z; };
 	float Distance(const Location& location) const;
 	Vector3D ToVector(Location& location) const;
 
