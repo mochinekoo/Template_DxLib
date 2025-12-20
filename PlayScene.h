@@ -6,6 +6,7 @@ class PlayScene :
 private:
 	std::string name = "PlayScene";
 	int time = 0;
+	bool isJumping = false;
 public:
 	PlayScene();
 	~PlayScene();
@@ -13,5 +14,7 @@ public:
 	void Update() override;
 	void Draw() override;
 	std::string GetName() const override { return name; };
+	bool GetIsJumping() const { return isJumping; };
+	void SetIsJumping(bool isJumping_) { isJumping = isJumping_; };
 };
 

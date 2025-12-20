@@ -5,6 +5,10 @@
 #include "application.h"
 
 namespace {
+	const int GROUND_Y = 600;
+	const float GRAVITY = 0.5;
+	const float JUMP_POWER = -15.0f;
+
 	CircleDraw* obj = new CircleDraw(std::string("TitleCircle"), 30.0f, GetColor(255, 0, 0), Location(150.0f, 150.0f, 0.0f), Vector3D(0.0f, 0.0f, 0.0f));
 	CircleDraw* obj2 = new CircleDraw(std::string("TitleCircle2"), 40.0f, GetColor(0, 255, 0), Location(550.0f, 350.0f, 0.0f), Vector3D(0.0f, 0.0f, 0.0f));
 }
@@ -24,6 +28,31 @@ void PlayScene::Init() {
 
 void PlayScene::Update() {
 	time++;
+	if (GameUtility::IsKeyDown(KEY_INPUT_P) && !isJumping) {
+		Vector3D vec = obj2->GetVector();
+		vec.SetY(JUMP_POWER);
+		obj2->SetVector(vec);
+		isJumping = true;
+	}
+
+	if (isJumping) {
+		Vector3D vec = obj2->GetVector();
+		Location pos = obj2->GetPostion();
+
+		pos.SetY(pos.GetY() + vec.GetY()); 
+		vec.SetY(vec.GetY() + GRAVITY);
+
+		if (pos.GetY() >= GROUND_Y) {
+			pos.SetY(GROUND_Y);
+			vec.SetY(0);
+			isJumping = false;
+		}
+
+
+		obj2->SetPostion(pos);
+		obj2->SetVector(vec);
+	}
+
 	obj->SetPostion(Location(GetMouseLocation().GetX(), GetMouseLocation().GetY(),  0));
 
 	if (obj->IsCircleCollision(*obj2)) {
