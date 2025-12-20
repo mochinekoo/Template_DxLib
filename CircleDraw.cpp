@@ -14,3 +14,8 @@ CircleDraw::~CircleDraw()
 void CircleDraw::Draw() {
 	DxLib::DrawCircle(postion.GetX(), postion.GetY(), GetRadius(), GetColor(), true);
 }
+
+bool CircleDraw::IsCircleCollision(const CircleDraw& other) const {
+	float distance = postion.Distance(other.postion);
+	return distance < (radius + other.radius);
+}

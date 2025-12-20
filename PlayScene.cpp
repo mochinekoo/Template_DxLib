@@ -26,7 +26,7 @@ void PlayScene::Update() {
 	time++;
 	obj->SetPostion(Location(GetMouseLocation().GetX(), GetMouseLocation().GetY(),  0));
 
-	if (obj->GetPostion().Distance(obj2->GetPostion()) < obj->GetRadius() + obj2->GetRadius()) {
+	if (obj->IsCircleCollision(*obj2)) {
 		obj->SetColor(GetColor(0, 0, 255));
 	}
 	else {

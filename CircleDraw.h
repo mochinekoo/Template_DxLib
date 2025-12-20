@@ -11,4 +11,5 @@ public:
 	~CircleDraw();
 	float GetRadius() const { return radius; };
 	void Draw() override;
+	bool IsCircleCollision(const CircleDraw& other) const;
 };
