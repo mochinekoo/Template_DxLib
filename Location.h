@@ -6,6 +6,7 @@ private:
 	float y_;
 	float z_;
 public:
+	Location();
 	Location(float x, float y, float z);
 	float GetX() const;
 	float GetY() const;

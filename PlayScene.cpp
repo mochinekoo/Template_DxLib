@@ -3,6 +3,7 @@
 #include "CircleDraw.h"
 #include "SceneManager.h"
 #include "application.h"
+#include "TriangleDraw.h"
 
 namespace {
 	const int GROUND_Y = 600;
@@ -11,12 +12,14 @@ namespace {
 
 	CircleDraw* obj = new CircleDraw(std::string("TitleCircle"), 30.0f, GetColor(255, 0, 0), Location(150.0f, 150.0f, 0.0f), Vector3D(0.0f, 0.0f, 0.0f));
 	CircleDraw* obj2 = new CircleDraw(std::string("TitleCircle2"), 40.0f, GetColor(0, 255, 0), Location(550.0f, 350.0f, 0.0f), Vector3D(0.0f, 0.0f, 0.0f));
+	TriangleDraw* triangle = new TriangleDraw(std::string("TitleTriangle"), 60.0f, GetColor(0, 255, 255), Location(400.0f, 300.0f, 0.0f), Vector3D(0.0f, 0.0f, 0.0f));
 }
 
 PlayScene::PlayScene() :
 	time(0) {
 	drawList.push_back(obj);
 	drawList.push_back(obj2);
+	drawList.push_back(triangle);
 }
 
 PlayScene::~PlayScene() {
@@ -33,6 +36,10 @@ void PlayScene::Update() {
 		vec.SetY(JUMP_POWER);
 		obj2->SetVector(vec);
 		isJumping = true;
+	}
+
+	if (CheckHitKey(KEY_INPUT_R)) {
+		triangle->SetAngle(triangle->GetAngle() + 0.1);
 	}
 
 	if (isJumping) {

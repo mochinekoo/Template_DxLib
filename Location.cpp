@@ -1,6 +1,10 @@
 #include "Location.h"
 #include <cmath>
 
+Location::Location()
+ : x_(0), y_(0), z_(0){
+}
+
 Location::Location(float x, float y, float z)
  : x_(x), y_(y), z_(z){
 }

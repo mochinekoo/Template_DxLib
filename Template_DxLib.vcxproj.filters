@@ -66,6 +66,9 @@
     <ClCompile Include="Matrix.cpp">
       <Filter>ソース ファイル\Library</Filter>
     </ClCompile>
+    <ClCompile Include="TriangleDraw.cpp">
+      <Filter>ソース ファイル\Draw</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h">
@@ -106,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="MathUtility.h">
       <Filter>ソース ファイル\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="TriangleDraw.h">
+      <Filter>ソース ファイル\Draw</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
