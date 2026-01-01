@@ -63,6 +63,9 @@
     <ClCompile Include="BoxDraw.cpp">
       <Filter>ソース ファイル\Draw</Filter>
     </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>ソース ファイル\Library</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h">
@@ -97,6 +100,12 @@
     </ClInclude>
     <ClInclude Include="BoxDraw.h">
       <Filter>ソース ファイル\Draw</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>ソース ファイル\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtility.h">
+      <Filter>ソース ファイル\Library</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
